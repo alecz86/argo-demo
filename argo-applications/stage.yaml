@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-qa
+  name: nginx-stage
   namespace: argocd
 spec:
   project: default
@@ -12,11 +12,11 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles: 
-      - ../envs/qa.yaml
+      - ../envs/stage.yaml
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: nginx-qa
+    namespace: nginx-stage
 
   syncPolicy:
     automated: {}

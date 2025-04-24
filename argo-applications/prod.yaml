@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: nginx-prod
-  namespace: nginx-prod
+  namespace: argocd
 spec:
   project: default
 
@@ -12,7 +12,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - ../envs/prod.yaml  # Added space after '-'
+        - ../envs/prod.yaml
 
   destination:
     server: https://kubernetes.default.svc
