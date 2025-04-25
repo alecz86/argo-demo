@@ -3,7 +3,7 @@ replicaCount: 5
 image:
   repository: us-central1-docker.pkg.dev/terraform-project-alexdevops25/artemis/artemis
   pullPolicy: IfNotPresent
-  tag: "3.0.0"
+  tag: "2.0.0"
 
 service:
   port: 5000
@@ -17,11 +17,11 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     acme.cert-manager.io/http01-edit-in-place: "true"
   hosts:
-    - host: artemis-dev.9aws.com
+    - host: artemis-qa.9aws.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls: 
-   - secretName: artemis-dev-tls
+   - secretName: artemis-qa-tls
      hosts:
-       - artemis-dev.9aws.com
+       - artemis-qa.9aws.com
