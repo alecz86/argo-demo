@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/alecz86/nodejs-demo.git
+    repoURL: https://github.com/alecz86/argo-demo.git
     path: application
     targetRevision: HEAD
     helm:
