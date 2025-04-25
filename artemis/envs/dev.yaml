@@ -1,9 +1,8 @@
-replicaCount: 5
+replicaCount: 1
 
 image:
   repository: us-central1-docker.pkg.dev/terraform-project-alexdevops25/artemis/artemis
-  pullPolicy: IfNotPresent
-  tag: "3.0.0"
+  tag: "10.0.0"
 
 service:
   port: 5000
@@ -25,3 +24,4 @@ ingress:
    - secretName: artemis-dev-tls
      hosts:
        - artemis-dev.9aws.com
+       
